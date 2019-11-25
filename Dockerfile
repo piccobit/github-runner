@@ -1,4 +1,4 @@
-FROM scratch
+FROM ubuntu:latest
 
 ENV ACTIONS_VERSION 2.160.2
 
