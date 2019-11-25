@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      env:
+      with:
         ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
       run: docker build --build-arg ${ACTIONS_TOKEN} . --file Dockerfile --tag github-runner:$(date +%s)
