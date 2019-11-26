@@ -13,4 +13,4 @@ jobs:
     - name: Build the Docker image
       with:
         actions_token: ${{ secrets.actions_token }}
-        run: docker build --build-arg ${ACTIONS_TOKEN} . --file Dockerfile --tag github-runner:$(date +%s)
+      run: docker build --build-arg ${ACTIONS_TOKEN} . --file Dockerfile --tag github-runner:$(date +%s)
