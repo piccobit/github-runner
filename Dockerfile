@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
 ENV ACTIONS_VERSION 2.160.2
+ENV AGENT_ALLOW_RUNASROOT 1
 
 WORKDIR actions-runner
 
