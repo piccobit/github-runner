@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@master
     - name: Build the Docker image
-      uses: actions/checkout@v1
       with:
         actions_token: ${{ secrets.actions_token }}
       run: docker build --build-arg ${ACTIONS_TOKEN} . --file Dockerfile --tag github-runner:$(date +%s)
